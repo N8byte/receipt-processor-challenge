@@ -13,10 +13,11 @@ RUN go build -o receipt-processor
 
 # Run stage
 FROM alpine:latest
+LABEL name="receipt-processor-challenge"
 
 WORKDIR /root/
 
-COPY --from=builder /app/myapp .
+COPY --from=builder /app/receipt-processor .
 
 EXPOSE 8080
 
