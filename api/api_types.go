@@ -10,7 +10,7 @@ import (
 // Item defines model for Item.
 type Item struct {
 	// Price The total price payed for this item.
-	Price string `json:"price"`
+	Price float64 `json:"price,string"`
 
 	// ShortDescription The Short Product Description for the item.
 	ShortDescription string `json:"shortDescription"`
@@ -30,7 +30,7 @@ type Receipt struct {
 	Retailer string `json:"retailer"`
 
 	// Total The total amount paid on the receipt.
-	Total string `json:"total"`
+	Total float64 `json:"total,string"`
 }
 
 // PostReceiptsProcessJSONRequestBody defines body for PostReceiptsProcess for application/json ContentType.
